@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Insights & Thought Leadership Blog | Global Premier Centre (GPC)</title>
+    <meta name="description" content="Read expert articles on executive education, ISO management standards, project management, and global corporate leadership from Global Premier Centre.">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f2b48',
+                            900: '#0b1d3a',
+                            950: '#061021',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-ribbon text-gold-500"></i> ISO 9001:2015 & ISO 45001 Certified Institution</span>
+                <span class="hidden lg:flex items-center gap-2"><i class="fa-solid fa-newspaper text-gold-500"></i> Executive Thought Leadership & Publications Desk</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <a href="tel:+442072471452" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-phone text-gold-500 mr-1"></i> +44 20 7247 1452</a>
+                <a href="mailto:info@gpcertification.com" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-envelope text-gold-500 mr-1"></i> info@gpcertification.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVIGATION -->
+    <header class="bg-navy-900 text-white sticky top-0 z-40 shadow-xl border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center shadow-lg text-navy-950 font-black text-2xl tracking-wider">
+                        GPC
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg leading-tight tracking-wide text-white">GLOBAL PREMIER</span>
+                        <span class="text-xs text-gold-400 tracking-widest font-semibold">CENTRE FOR EXECUTIVE EDUCATION</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
+                    <a href="index.html" class="text-slate-300 hover:text-gold-400 transition-colors">Home</a>
+                    <a href="courses.html" class="text-slate-300 hover:text-gold-400 transition-colors">Courses</a>
+                    <a href="cities.html" class="text-slate-300 hover:text-gold-400 transition-colors">Destinations</a>
+                    <a href="about.html" class="text-slate-300 hover:text-gold-400 transition-colors">About</a>
+                    <a href="blog.html" class="text-gold-400 border-b-2 border-gold-400 pb-1">Blogs</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-gold-400 transition-colors">Contact Us</a>
+                </nav>
+
+                <!-- Action Button & Admin Mode Toggle -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button onclick="toggleAdminMode()" id="admin-mode-toggle" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-2 rounded text-amber-400 font-bold border border-slate-700 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-lock-open"></i> <span id="admin-toggle-text">Enable Admin Publish</span>
+                    </button>
+                    <a href="courses.html" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-950 font-bold text-sm px-5 py-2.5 rounded-lg shadow-md transition-all">
+                        Inquire Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-950 border-t border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-slate-300 hover:text-gold-400">Home</a>
+            <a href="courses.html" class="block py-2 text-slate-300 hover:text-gold-400">Courses</a>
+            <a href="cities.html" class="block py-2 text-slate-300 hover:text-gold-400">Destinations</a>
+            <a href="about.html" class="block py-2 text-slate-300 hover:text-gold-400">About</a>
+            <a href="blog.html" class="block py-2 text-gold-400 font-bold">Blogs</a>
+            <a href="contact.html" class="block py-2 text-slate-300 hover:text-gold-400">Contact Us</a>
+            <button onclick="toggleAdminMode()" class="w-full text-left py-2 text-amber-400 font-bold"><i class="fa-solid fa-user-gear mr-1"></i> Toggle Admin Mode</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-navy-900 text-white py-16 lg:py-20 overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold mb-6">
+                    <i class="fa-solid fa-pen-nib"></i> Executive Insights & Research Publications
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Thought Leadership & <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Industry Perspectives</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Explore authoritative analyses, regulatory updates, ISO management guidelines, and strategic management case studies published by GPC's academic board and industry fellows.
+                </p>
+                <div id="admin-action-banner" class="hidden bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl flex items-center justify-between gap-4">
+                    <div>
+                        <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider">Admin Publishing Mode Active</h4>
+                        <p class="text-xs text-slate-300">You can now publish new articles directly to this page using the form below.</p>
+                    </div>
+                    <button onclick="openBlogModal()" class="bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold px-4 py-2 rounded-lg text-xs shadow-md whitespace-nowrap transition">
+                        <i class="fa-solid fa-plus mr-1"></i> Publish New Blog
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN BLOG CONTENT AREA -->
+    <main class="py-16 bg-slate-50 flex-1">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- SEARCH & CATEGORY FILTER BAR -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-12 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <div id="category-filters" class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+                    <button onclick="filterBlogs('All')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white transition">All Articles</button>
+                    <button onclick="filterBlogs('ISO Standards')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">ISO Standards</button>
+                    <button onclick="filterBlogs('Leadership')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Leadership</button>
+                    <button onclick="filterBlogs('Project Management')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Project Management</button>
+                    <button onclick="filterBlogs('Corporate Finance')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Corporate Finance</button>
+                </div>
+
+                <div class="relative w-full md:w-72">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                    <input type="text" id="blogSearch" oninput="handleSearch(this.value)" placeholder="Search articles or topics..." class="w-full pl-9 pr-4 py-2 text-xs border border-slate-300 rounded-xl focus:ring-2 focus:ring-gold-500 focus:outline-none bg-slate-50">
+                </div>
+            </div>
+
+            <!-- FEATURED / LATEST BLOG GRID -->
+            <div id="blogsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically populated via JavaScript -->
+            </div>
+
+            <!-- NO RESULTS STATE -->
+            <div id="noBlogResults" class="hidden text-center py-16 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+                <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h3 class="text-lg font-bold text-navy-900 mb-1">No Articles Found</h3>
+                <p class="text-slate-500 text-xs mb-4">No published blogs match your current search criteria or category filter.</p>
+                <button onclick="filterBlogs('All')" class="px-4 py-2 bg-navy-900 text-white rounded-lg text-xs font-semibold hover:bg-slate-800 transition">
+                    View All Articles
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FULL PAGE BLOG READER VIEW MODAL -->
+    <div id="blogReaderModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-10 relative">
+            <button onclick="closeBlogReader()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl font-bold p-2 bg-slate-100 rounded-full w-10 h-10 flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="mb-6">
+                <div class="flex items-center gap-2 mb-3">
+                    <span id="readerCategory" class="bg-gold-100 text-gold-800 font-bold px-3 py-1 rounded-full text-xs">Category</span>
+                    <span id="readerDate" class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> Date</span>
+                    <span class="text-xs text-slate-400">•</span>
+                    <span id="readerAuthor" class="text-xs text-slate-600 font-semibold"><i class="fa-solid fa-user-pen mr-1"></i> Author</span>
+                </div>
+                <h2 id="readerTitle" class="text-2xl sm:text-3xl font-extrabold text-navy-900 leading-snug">Blog Title</h2>
+            </div>
+
+            <div class="mb-8 rounded-2xl overflow-hidden max-h-80 border border-slate-200">
+                <img id="readerImage" src="" alt="Blog Featured Image" class="w-full h-full object-cover">
+            </div>
+
+            <div id="readerContent" class="prose max-w-none text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+                <!-- Full body content -->
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between items-center">
+                <button onclick="closeBlogReader()" class="px-5 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-xs font-bold transition">
+                    Back to Articles
+                </button>
+                <div class="flex gap-2">
+                    <button onclick="alert('Article link copied to clipboard!')" class="px-4 py-2.5 bg-navy-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition">
+                        <i class="fa-solid fa-share-nodes mr-1"></i> Share Article
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PUBLISH NEW BLOG MODAL (ADMIN ONLY) -->
+    <div id="blogPublishModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+            <button onclick="closeBlogModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-6">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-50 text-amber-700 text-xs font-bold mb-2">
+                    <i class="fa-solid fa-shield-halved"></i> Executive Admin System
+                </div>
+                <h3 class="text-xl font-bold text-navy-900">Publish New Blog Article</h3>
+                <p class="text-xs text-slate-500 mt-1">Fill out the details below to instantly publish a full-fledged public page article.</p>
+            </div>
+            
+            <form id="publishBlogForm" onsubmit="handlePublishBlog(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Article Title *</label>
+                    <input type="text" id="blogTitleInput" required placeholder="e.g. Navigating ISO 9001:2015 Recertification Audits" class="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-bold text-slate-700 uppercase mb-1">Category Domain *</label>
+                        <select id="blogCategoryInput" class="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500">
+                            <option value="ISO Standards">ISO Standards</option>
+                            <option value="Leadership">Leadership</option>
+                            <option value="Project Management">Project Management</option>
+                            <option value="Corporate Finance">Corporate Finance</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-700 uppercase mb-1">Author Name *</label>
+                        <input type="text" id="blogAuthorInput" required value="GPC Academic Board" class="w-full p-2.5 border border-slate-300 rounded-lg">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Featured Image URL</label>
+                    <input type="url" id="blogImageInput" placeholder="https://images.unsplash.com/photo-..." class="w-full p-2.5 border border-slate-300 rounded-lg" value="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Full Article Content (Markdown / HTML supported) *</label>
+                    <textarea id="blogContentInput" rows="5" required placeholder="Write full-fledged article paragraphs here..." class="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-lg text-xs shadow-md transition">
+                    Publish Public Blog Post
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 pt-16 pb-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center font-black text-navy-950 text-xl">
+                            GPC
+                        </div>
+                        <span class="font-bold text-lg text-white tracking-wide">GLOBAL PREMIER CENTRE</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        International leader in executive education, corporate capacity building, and organizational consulting.
+                    </p>
+                    <div class="pt-2 text-xs text-slate-400 space-y-1">
+                        <p><strong class="text-slate-300">Headquarters:</strong> 14 Cambridge Court, 210 Shepherds Bush Rd, London W6 7NJ</p>
+                        <p><strong class="text-slate-300">Tel:</strong> +44 20 7247 1452</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h3 class="text-white font-bold text-sm mb-4 border-b border-slate-800 pb-2">Quick Directory</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html" class="hover:text-gold-400 transition-colors">Home Page</a></li>
+                        <li><a href="courses.html" class="hover:text-gold-400 transition-colors">Full Courses</a></li>
+                        <li><a href="cities.html" class="hover:text-gold-400 transition-colors">11 Destination Hubs</a></li>
+                        <li><a href="about.html" class="hover:text-gold-400 transition-colors">ISO Standards & Accreditation</a></li>
+                        <li><a href="blog.html" class="hover:text-gold-400 transition-colors">Executive Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Accreditation Seals -->
+                <div>
+                    <h3 class="text-white font-bold text-sm mb-4 border-b border-slate-800 pb-2">Certified Frameworks</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="text-slate-300">ISO 9001:2015 Certification</span></li>
+                        <li><span class="text-slate-300">ISO 45001:2018 Certification</span></li>
+                        <li><span class="text-slate-300">PMI Authorized Coursework</span></li>
+                        <li><span class="text-slate-300">SHRM Recertification Partner</span></li>
+                        <li><span class="text-slate-300">CPD Standards Certified</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Inquiries -->
+                <div>
+                    <h3 class="text-white font-bold text-sm mb-4 border-b border-slate-800 pb-2">Global Support</h3>
+                    <p class="text-xs text-slate-400 mb-4">Speak with an advisor for custom institutional accreditation mapping.</p>
+                    <a href="contact.html" class="block text-center bg-navy-900 hover:bg-slate-800 text-gold-400 border border-slate-700 font-semibold py-2 px-4 rounded text-xs transition-colors">
+                        Submit Inquiry
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Global Premier Centre (GPC). All rights reserved. Modeled on international standards.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-200">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-200">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-200">Accreditation Policies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // DEFAULT INITIAL BLOG POSTS
+        const defaultBlogs = [
+            {
+                id: 'blog_1',
+                title: 'Maximizing Return on Investment (ROI) Through ISO 9001:2015 Quality Management Systems',
+                category: 'ISO Standards',
+                author: 'Dr. Sarah Jenkins, Director of Academic Standards',
+                date: 'October 18, 2026',
+                image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+                snippet: 'Discover how structured quality management frameworks enhance operational transparency, streamline executive decision-making, and boost delegate satisfaction benchmarks...',
+                content: `
+                    <p>In today's fast-paced corporate environment, quality is not merely an optional benchmark—it is the foundational cornerstone of long-term organizational viability. Certification under <strong>ISO 9001:2015</strong> demonstrates a systemic focus on delegate satisfaction, standardized instructional design, rigorous trainer vetting, and continuous organizational improvement.</p>
+                    <h4 class="text-lg font-bold text-navy-900 mt-4 mb-2">Key Quality Pillar Focus:</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Standardized course curriculum review cycles and learning objective mapping.</li>
+                        <li>Delegate feedback analysis and post-course evaluation benchmarks.</li>
+                        <li>Transparent corporate governance, data privacy, and administration.</li>
+                    </ul>
+                    <p class="mt-4">When corporate sponsors invest in GPC programs, the ISO 9001 QMS guarantees that every instructional module has undergone rigorous external auditing, ensuring immediate operational impact.</p>
+                `
+            },
+            {
+                id: 'blog_2',
+                title: 'The Evolution of Executive Leadership in Post-Modern Corporate Governance',
+                category: 'Leadership',
+                author: 'Global Premier Centre Directorate',
+                date: 'October 12, 2026',
+                image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
+                snippet: 'An examination of how modern executives balance strategic agility, stakeholder capitalism, and cross-border regulatory compliance in 12 major global financial hubs...',
+                content: `
+                    <p>Modern executive leadership requires a delicate equilibrium between financial stewardship and adaptive vision. As organizations navigate complex geopolitical landscapes across London, Dubai, and Riyadh, leaders must embrace continuous professional development.</p>
+                    <p class="mt-4">Our masterclasses integrate case-study evaluations from Fortune 500 entities, equipping leaders with the tools needed for agile governance and transformative team leadership.</p>
+                `
+            },
+            {
+                id: 'blog_3',
+                title: 'FIDIC Contract Risk Allocation: Best Practices for Major Infrastructure Projects',
+                category: 'Project Management',
+                author: 'Engineering & Legal Advisory Board',
+                date: 'September 29, 2026',
+                image: 'https://images.unsplash.com/photo-1541888946425-d0fbb18f1f7d?auto=format&fit=crop&w=800&q=80',
+                snippet: 'Analyzing the Rainbow Suite contracts, claim quantification methodologies, and arbitration strategies for mega-projects and Vision 2030 initiatives...',
+                content: `
+                    <p>Megaprojects require rigorous adherence to international contract standards. The FIDIC suite provides the essential contractual architecture for mitigating delay claims and cost overruns.</p>
+                    <p class="mt-4">Delegates attending our Riyadh and London masterclasses receive practical training in claim substantiation and alternative dispute resolution.</p>
+                `
+            }
+        ];
+
+        // LOCALSTORAGE HELPER
+        function getBlogs() {
+            const raw = localStorage.getItem('gpc_admin_blogs');
+            if (!raw) {
+                localStorage.setItem('gpc_admin_blogs', JSON.stringify(defaultBlogs));
+                return defaultBlogs;
+            }
+            return JSON.parse(raw);
+        }
+
+        function saveBlogs(blogs) {
+            localStorage.setItem('gpc_admin_blogs', JSON.stringify(blogs));
+        }
+
+        let currentCategoryFilter = 'All';
+        let currentSearchQuery = '';
+        let isAdminMode = false;
+
+        // TOGGLE ADMIN PUBLISH MODE
+        function toggleAdminMode() {
+            isAdminMode = !isAdminMode;
+            const banner = document.getElementById('admin-action-banner');
+            const toggleText = document.getElementById('admin-toggle-text');
+            const toggleBtn = document.getElementById('admin-mode-toggle');
+
+            if (isAdminMode) {
+                banner.classList.remove('hidden');
+                toggleText.innerText = 'Admin Mode Active';
+                toggleBtn.classList.remove('bg-slate-800', 'border-slate-700');
+                toggleBtn.classList.add('bg-amber-500', 'text-slate-950', 'border-amber-600');
+                alert('Admin Publishing Mode Enabled! You can now publish new blog posts directly to this page.');
+            } else {
+                banner.classList.add('hidden');
+                toggleText.innerText = 'Enable Admin Publish';
+                toggleBtn.classList.add('bg-slate-800', 'border-slate-700');
+                toggleBtn.classList.remove('bg-amber-500', 'text-slate-950', 'border-amber-600');
+            }
+            renderBlogs();
+        }
+
+        // RENDER BLOG CARDS
+        function renderBlogs() {
+            const blogs = getBlogs();
+            const container = document.getElementById('blogsGrid');
+            const noResults = document.getElementById('noBlogResults');
+
+            const filtered = blogs.filter(blog => {
+                const matchesCategory = currentCategoryFilter === 'All' || blog.category === currentCategoryFilter;
+                const matchesSearch = blog.title.toLowerCase().includes(currentSearchQuery.toLowerCase()) || 
+                                      blog.snippet.toLowerCase().includes(currentSearchQuery.toLowerCase()) ||
+                                      blog.author.toLowerCase().includes(currentSearchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            noResults.classList.add('hidden');
+            container.innerHTML = filtered.map(blog => `
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="${blog.image}" alt="${blog.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-navy-900/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-500/30">
+                                ${blog.category}
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-slate-400 mb-2 flex items-center gap-3">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> ${blog.date}</span>
+                            </div>
+                            <h3 class="font-bold text-navy-900 text-lg leading-snug mb-3 group-hover:text-gold-600 transition-colors">
+                                ${blog.title}
+                            </h3>
+                            <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-4">
+                                ${blog.snippet}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-slate-100 pt-4">
+                        <span class="text-xs text-slate-500 font-semibold truncate max-w-[180px]"><i class="fa-solid fa-user mr-1"></i> ${blog.author}</span>
+                        <div class="flex items-center gap-2">
+                            ${isAdminMode ? `<button onclick="deleteBlog('${blog.id}')" class="bg-red-50 hover:bg-red-600 hover:text-white text-red-600 font-bold px-3 py-2 rounded-lg text-xs transition border border-red-200"><i class="fa-solid fa-trash"></i></button>` : ''}
+                            <button onclick="openBlogReader('${blog.id}')" class="bg-navy-900 hover:bg-gold-500 hover:text-navy-950 text-white text-xs font-bold px-4 py-2 rounded-lg transition">
+                                Read Article <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // CATEGORY FILTER
+        function filterBlogs(cat) {
+            currentCategoryFilter = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.className = 'cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition';
+            });
+            event.target.className = 'cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white transition';
+            renderBlogs();
+        }
+
+        // SEARCH
+        function handleSearch(query) {
+            currentSearchQuery = query.trim();
+            renderBlogs();
+        }
+
+        // BLOG READER MODAL
+        function openBlogReader(id) {
+            const blogs = getBlogs();
+            const blog = blogs.find(b => b.id === id);
+            if (!blog) return;
+
+            document.getElementById('readerCategory').innerText = blog.category;
+            document.getElementById('readerDate').innerHTML = `<i class="fa-regular fa-calendar mr-1"></i> ${blog.date}`;
+            document.getElementById('readerAuthor').innerHTML = `<i class="fa-solid fa-user-pen mr-1"></i> ${blog.author}`;
+            document.getElementById('readerTitle').innerText = blog.title;
+            document.getElementById('readerImage').src = blog.image;
+            document.getElementById('readerContent').innerHTML = blog.content;
+
+            document.getElementById('blogReaderModal').classList.remove('hidden');
+        }
+
+        function closeBlogReader() {
+            document.getElementById('blogReaderModal').classList.add('hidden');
+        }
+
+        // PUBLISH MODAL
+        function openBlogModal() {
+            document.getElementById('blogPublishModal').classList.remove('hidden');
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blogPublishModal').classList.add('hidden');
+        }
+
+        // HANDLE PUBLISH FORM SUBMISSION
+        function handlePublishBlog(e) {
+            e.preventDefault();
+            const title = document.getElementById('blogTitleInput').value;
+            const category = document.getElementById('blogCategoryInput').value;
+            const author = document.getElementById('blogAuthorInput').value;
+            const image = document.getElementById('blogImageInput').value || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80';
+            const rawContent = document.getElementById('blogContentInput').value;
+
+            // Format snippet from content
+            const snippet = rawContent.replace(/<[^>]*>?/gm, '').substring(0, 150) + '...';
+            const formattedContent = `<p>${rawContent.replace(/\n/g, '</p><p class="mt-4">')}</p>`;
+
+            const now = new Date();
+            const dateStr = `${now.toLocaleString('default', { month: 'long' })} ${now.getDate()}, ${now.getFullYear()}`;
+
+            const newBlog = {
+                id: 'blog_' + Date.now(),
+                title,
+                category,
+                author,
+                date: dateStr,
+                image,
+                snippet,
+                content: formattedContent
+            };
+
+            const blogs = getBlogs();
+            blogs.unshift(newBlog);
+            saveBlogs(blogs);
+
+            alert('Article successfully published and live on the website!');
+            closeBlogModal();
+            document.getElementById('publishBlogForm').reset();
+            renderBlogs();
+        }
+
+        // DELETE BLOG
+        function deleteBlog(id) {
+            if (confirm('Are you sure you want to delete this published article?')) {
+                let blogs = getBlogs();
+                blogs = blogs.filter(b => b.id !== id);
+                saveBlogs(blogs);
+                renderBlogs();
+            }
+        }
+
+        // INITIALIZE ON LOAD
+        window.addEventListener('DOMContentLoaded', () => {
+            renderBlogs();
+        });
+    </script>
+</body>
+</html>

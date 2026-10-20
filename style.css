@@ -1,0 +1,58 @@
+/* Typography Update */
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Category Badge */
+.card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #d9534f;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Course Results Section */
+.course-results {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.course-results h2 {
+  margin-bottom: 1rem;
+  color: #0d2c54;
+}
+
+.course-item {
+  background: #f8f9fa;
+  border-left: 4px solid #0d2c54;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.course-item h4 {
+  margin-bottom: 0.25rem;
+  color: #111;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-weight: 600;
+}
